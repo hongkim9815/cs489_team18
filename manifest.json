@@ -1,1 +1,19 @@
-~~
+{
+    "manifest_version": 2,
+
+    "name": "CS489_Chrome_Extension",
+    "descriptions": "My lovely words",
+    "version": "1.0",
+
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+
+    "permissions": [
+        "activeTab",
+        "storage"
+    ]
+}
+
+
