@@ -1,4 +1,6 @@
 <!doctype html>
+<script src="thirdParty/jquery-2.0.0.js"></script>
+<script src="script.js"></script>
 <html>
   <head>
     <style>
@@ -6,20 +8,28 @@
         width:400px;
         padding:1rem;
       }
-      textarea{
+      .textbar{
         width:100%;
-        font-size:2rem;
+        font-size:12pt;
       }
       #result{
-        font-size:2.5rem;
+        font-size:12pt;
       }
     </style>
   </head>
 
   <body>
-    <h1>FrequencyOf</h1>
-    <textarea id="user" rows="3"></textarea>
-    <div id="result"></div>
-    <script src="script.js"></script>
+    <center>
+      <input type="text" id="name">
+      <a id="submit_button">
+        <button>Submit</button>
+      </a>
+      meaning: <div id="result"></div>
+      <br>
+      good: <div id="good"></div>
+      bad: <div id="bad"></div>
+      good_recent: <div id="good_recent"></div>
+      bad_recent: <div id="bad_recent"></div>
+    </center>
   </body>
 </html>
