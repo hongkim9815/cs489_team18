@@ -3,7 +3,7 @@
 
     "name": "CS489_Chrome_Extension",
     "description": "Word Search",
-    "version": "1.1",
+    "version": "1.2",
 
     "browser_action": {
         "default_icon": "icon.png",
@@ -18,7 +18,7 @@
 
     "background":
     {
-        "scripts": ["thirdParty/jquery-2.0.0.js"]
+        "scripts": ["thirdParty/jquery-2.2.4.min.js"]
     }
 
 }

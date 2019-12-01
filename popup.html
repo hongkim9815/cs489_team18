@@ -1,5 +1,5 @@
 <!doctype html>
-<script src="thirdParty/jquery-2.0.0.js"></script>
+<script src="thirdParty/jquery-2.2.4.min.js"></script>
 <script src="script.js"></script>
 <html>
   <head>
@@ -7,6 +7,7 @@
       body{
         width:400px;
         padding:1rem;
+        font-size: 12pt;
       }
       .textbar{
         width:100%;
@@ -20,16 +21,21 @@
 
   <body>
     <center>
-      <input type="text" id="name">
-      <a id="submit_button">
-        <button>Submit</button>
-      </a>
-      meaning: <div id="result"></div>
-      <br>
-      good: <div id="good"></div>
-      bad: <div id="bad"></div>
-      good_recent: <div id="good_recent"></div>
-      bad_recent: <div id="bad_recent"></div>
+      <form action="http://110.76.78.39:46857/cs489_ce/submit.php" method="POST">
+        <input type="text" id="name" name="name">
+        <br>
+        <div>
+          meaning of <span id="word"></span>: <span id="result"></span>
+          <br>
+          good: <span id="good"></span>
+          <br>
+          bad: <span id="bad"></span>
+          <br>
+          good_recent: <span id="good_recent"></span>
+          <br>
+          bad_recent: <span id="bad_recent"></span>
+        </div>
+      </form>
     </center>
   </body>
 </html>
