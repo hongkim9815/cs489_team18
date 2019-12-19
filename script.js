@@ -19,8 +19,8 @@ function submit_data_func(){
           document.getElementById('good').innerHTML = "";
           document.getElementById('bad').innerHTML = "";
           document.getElementById('result').innerHTML =
-          'There is no "'+datalist[1]+'"<br><br>'
-          + 'Please, add a meaning of the word...'
+          'There is no "'+datalist[1]+'" in our word list...<br><br>'
+          + 'Please, add the meaning of the word!'
           + '<br>'
           + '<textarea class="text" id="mean" style="width:100%; height:100%"></textarea>'
           + '<br>'
@@ -106,6 +106,8 @@ function submit_data_func(){
 document.addEventListener('DOMContentLoaded', function(){
   chrome.tabs.getSelected(null, function(tab){
     chrome.tabs.executeScript(tab.id, {code: "window.getSelection().toString();"}, function (blocked){
+      if(blocked == null)
+        return;
       if(blocked[0].length > 0)
       {
         document.getElementById('name').value = blocked[0];
